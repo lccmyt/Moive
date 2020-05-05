@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#141931"
+    tools:context=".activity.SearchActivity">
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="30dp">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:id="@+id/back"
+            android:src="@mipmap/shape"
+            android:layout_marginLeft="28dp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="30.4dp"
+            android:gravity="left"
+            android:paddingTop="6.2dp"
+            android:paddingLeft="20dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="12sp"
+            android:hint=" 请输入影片名称"
+            android:background="@drawable/shape_search"
+            android:textColorHint="#999999"
+            android:id="@+id/et1"/>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/icon_search"
+            android:layout_gravity="center"
+            android:id="@+id/iv_search"
+            android:layout_marginLeft="30dp"/>
+
+    </LinearLayout>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_marginLeft="24dp"-->
+        <!--android:layout_marginRight="24dp"-->
+        <!--android:layout_below="@id/ll"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:id="@+id/rc1"-->
+        <!--android:layout_height="match_parent">-->
+    <!--</android.support.v7.widget.RecyclerView>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_below="@id/ll"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rc1"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/search_nowork_ll"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="@dimen/dp_164"
+            android:src="@mipmap/no_network"
+            android:layout_marginTop="@dimen/dp_204"
+            android:layout_marginLeft="@dimen/dp_98"
+            android:id="@+id/activity_nonetwork"
+            android:layout_height="@dimen/dp_164" />
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="@dimen/sp_14"
+            android:text="没有相关搜索结果"
+            android:gravity="center"
+            android:layout_marginTop="61dp"
+            android:textColor="#FFF"
+            android:layout_height="@dimen/dp_20" />
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="@dimen/sp_14"
+            android:text="换个词试试吧"
+            android:gravity="center"
+            android:textColor="#FFF"
+            android:layout_height="@dimen/dp_20" />
+    </LinearLayout>
+</RelativeLayout>

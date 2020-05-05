@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141931"
+    tools:context=".activity.NoNetWorkActivity">
+    <ImageView
+        android:layout_width="@dimen/dp_16"
+        android:src="@mipmap/shape"
+        android:layout_marginTop="@dimen/dp_47"
+        android:layout_marginLeft="@dimen/dp_28"
+        android:id="@+id/activity_nonetwork_shape"
+        android:layout_height="@dimen/dp_16" />
+    <ImageView
+        android:layout_width="@dimen/dp_164"
+        android:src="@mipmap/no_network"
+        android:layout_marginTop="@dimen/dp_204"
+        android:layout_marginLeft="@dimen/dp_98"
+        android:id="@+id/activity_nonetwork"
+        android:layout_height="@dimen/dp_164" />
+    <TextView
+        android:layout_width="@dimen/dp_56"
+        android:textSize="@dimen/sp_14"
+        android:text="暂无网络"
+        android:textColor="#FFF"
+        android:layout_marginTop="429dp"
+        android:layout_marginLeft="@dimen/dp_152"
+        android:layout_height="@dimen/dp_20" />
+</RelativeLayout>

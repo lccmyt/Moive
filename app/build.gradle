@@ -17,13 +17,72 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    //Xbanner依赖
+    implementation 'com.github.xiaohaibin:XBanner:1.7.0'
+    //json依赖
+    implementation 'com.google.code.gson:gson:2.6.2'
+    //TabLayout的依赖 改成当前版本
+    implementation 'com.android.support:design:28.0.0'
+    //volley框架依赖
+    implementation 'com.github.bumptech.glide:volley-integration:4.9.0'
+    //二维码 zxing依赖
+    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    //ok依赖
+    implementation 'com.squareup.okhttp3:okhttp:3.2.0'
+    //ok 日志的拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
+    // 以下 PhotoPicker 需要使用的依赖
+    // 注意版本号上下一致
+    implementation 'me.iwf.photopicker:PhotoPicker:0.9.12@aar'
+    implementation 'com.android.support:recyclerview-v7:28.4.0'
+    implementation 'com.android.support:design:28.4.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    //butterknife依赖
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    //导入eventBus的依赖
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //网络工具类依赖
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    //导入retrofit
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.x.y'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    //转换器，请求结果转换成Model
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    //配合Rxjava 使用
+    //高德地图
+    implementation 'com.amap.api:map2d:latest.integration'
+    implementation 'com.amap.api:location:latest.integration'
+    implementation 'com.amap.api:search:latest.integration'
+    //fresco依赖
+    implementation 'com.facebook.fresco:fresco:1.12.1'
+    // 在 API < 14 上的机器支持 WebP 时，需要添加
+    implementation 'com.facebook.fresco:animated-base-support:0.12.0'
+
+    // 支持 GIF 动图，需要添加
+    implementation 'com.facebook.fresco:animated-gif:0.12.0'
+
+    // 支持 WebP （静态图+动图），需要添加
+    implementation 'com.facebook.fresco:animated-webp:0.12.0'
+    implementation 'com.facebook.fresco:webpsupport:0.12.0'
+
+    // 仅支持 WebP 静态图，需要添加
+    implementation 'com.facebook.fresco:webpsupport:0.12.0'
+
+    // 沉浸式 依赖
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
 }

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141931"
+    android:orientation="vertical"
+    tools:context=".activity.MoreActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="44dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="30.4dp">
+
+        <!--<ImageView-->
+            <!--android:layout_width="16dp"-->
+            <!--android:layout_height="16dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@mipmap/jiantou"-->
+            <!--android:layout_marginLeft="28dp"-->
+            <!--android:id="@+id/back"/>-->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="@dimen/dp_16"
+            fresco:placeholderImage="@mipmap/shape"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_28"
+            android:id="@+id/back"
+            android:layout_height="@dimen/dp_16" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/back"
+            android:gravity="left"
+            android:paddingTop="6.2dp"
+            android:paddingLeft="20dp"
+            android:layout_marginLeft="42dp"
+            android:textSize="12sp"
+            android:hint=" 请输入影片名称"
+            android:background="@drawable/shape_search"
+            android:textColorHint="#999999"
+            android:id="@+id/et1"/>
+
+        <ImageView
+            android:layout_width="17.5dp"
+            android:layout_weight="1"
+            android:layout_height="17.5dp"
+            android:src="@mipmap/icon_search"
+            android:id="@+id/search" />
+    </LinearLayout>
+
+    <!--<android.support.design.widget.TabLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="#1c2243"-->
+        <!--android:id="@+id/tab"-->
+        <!--app:tabTextColor="#fff"-->
+        <!--android:layout_marginTop="18dp"-->
+        <!--android:layout_height="38dp">-->
+    <!--</android.support.design.widget.TabLayout>-->
+    <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:background="#1c2243"
+            android:id="@+id/tab"
+            app:tabTextColor="#fff"
+            android:layout_marginTop="18dp"
+            android:layout_height="38dp">
+    </com.google.android.material.tabs.TabLayout>
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:id="@+id/vp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+    <!--</android.support.v4.view.ViewPager>-->
+    <androidx.viewpager.widget.ViewPager
+        android:layout_marginTop="20dp"
+        android:id="@+id/vp"
+        android:layout_width="@dimen/dp_312"
+        android:layout_gravity="center"
+        android:layout_height="match_parent">
+    </androidx.viewpager.widget.ViewPager>
+</LinearLayout>
