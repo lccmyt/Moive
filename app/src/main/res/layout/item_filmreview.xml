@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.facebook.drawee.view.SimpleDraweeView
+        fresco:roundAsCircle="true"
+        android:layout_width="@dimen/dp_66"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:id="@+id/ying_ping_img"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_height="@dimen/dp_66" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:text="冷月女身"
+        android:textColor="#ffffff"
+        android:layout_toRightOf="@+id/ying_ping_img"
+        android:layout_marginTop="@dimen/dp_22"
+        android:id="@+id/ying_ping_name"
+        android:layout_height="wrap_content" />
+    <com.bawei.moive.view.RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:starCount="5"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toRightOf="@+id/ying_ping_img"
+        android:layout_below="@+id/ying_ping_name"
+        app:starEmpty="@mipmap/xing1"
+        app:starFill="@mipmap/xing3"
+        app:starHalf="@mipmap/xingxing2"
+        app:starImageSize="16dp"
+        app:starPadding="6dp"
+        android:id="@+id/rbb"
+        app:stepSize="Half">
+    </com.bawei.moive.view.RatingBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/ying_ping_name"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="#ffffff"
+        android:id="@+id/ying_ping_fen"
+        android:layout_toRightOf="@id/rbb"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:text="啊啊啊"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="04-24 09:15"
+        android:layout_marginTop="@dimen/dp_30"
+        android:id="@+id/ying_ping_shijian"
+        android:textColor="#ffffff"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginRight="@dimen/dp_22"
+        android:textColor="#ffffff"
+        android:id="@+id/ying_ping_jieshao"
+        android:layout_below="@+id/ying_ping_img"
+        android:layout_height="@dimen/dp_60" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/ying_ping_jieshao"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/dianzan"
+        android:src="@mipmap/zan"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/ying_ping_zuo_ren"
+        android:layout_toRightOf="@id/dianzan"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="#ffff"
+        android:layout_below="@+id/ying_ping_jieshao"
+        android:text="15464516581651"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="等3w人进行了回复"
+        android:id="@+id/ying_ping_count"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ying_ping_jieshao"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

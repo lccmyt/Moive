@@ -80,9 +80,16 @@ public class RetrofitManager {
         public Response intercept(Chain chain) throws IOException {
 
             Request request = chain.request();
+            String userId = SPUtils.getString(App.getAppContext(), "movieUser", "userId");
+            String sessionId = SPUtils.getString(App.getAppContext(), "movieUser", "sessionId");
+            if (TextUtils.isEmpty(userId) || TextUtils.isEmpty(sessionId)) {
+                return chain.proceed(request);
+            }
             Request request1 = request.newBuilder()
                     .addHeader("ak", "0110010010000")
                     .addHeader("Content-Type", "application/x-www-form-urlencoded")
+                    .addHeader("userId",userId)
+                    .addHeader("sessionId",sessionId)
                     .build();
             return chain.proceed(request1);
         }

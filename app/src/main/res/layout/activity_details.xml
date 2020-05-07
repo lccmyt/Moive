@@ -127,7 +127,7 @@
             android:background="#e8185e"/>
     </LinearLayout>
 
-    <com.bawei.moive.custom.DrawerLayout
+    <com.bawei.moive.view.DrawerLayout
         android:layout_above="@id/ll"
         android:layout_width="match_parent"
         android:id="@+id/dl"
@@ -201,7 +201,7 @@
                         android:background="#e8185e"/>-->
             </LinearLayout>
         </RelativeLayout>
-    </com.bawei.moive.custom.DrawerLayout>
+    </com.bawei.moive.view.DrawerLayout>
     <ImageView
         android:layout_width="16dp"
         android:layout_height="16dp"

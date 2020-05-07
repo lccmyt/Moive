@@ -3,12 +3,17 @@ package com.bawei.moive.bean;
 /**
  * @ProjectName: Moive
  * @Package: com.bawei.moive.bean
- * @ClassName: RegisterBean
+ * @ClassName: WhiteEvalutionBean
  * @Description: (java类作用描述)
  * @Author: 李聪聪
- * @CreateDate: 2020/4/20 20:04
+ * @CreateDate: 2020/5/7 19:47
  */
-public class RegisterBean {
+public class WhiteEvalutionBean {
+    /**
+     * message : 评论成功
+     * status : 0000
+     */
+
     private String message;
     private String status;
 

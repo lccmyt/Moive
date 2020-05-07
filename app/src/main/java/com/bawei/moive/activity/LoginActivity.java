@@ -17,6 +17,7 @@ import com.bawei.moive.bean.LoginBean;
 import com.bawei.moive.contract.LoginContract;
 import com.bawei.moive.presenter.LoginPresenter;
 import com.bawei.moive.utils.EncryptUtil;
+import com.bawei.moive.utils.SPUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -98,6 +99,8 @@ public class LoginActivity extends BaseActivity implements LoginContract.IView {
     @Override
     public void onSuccess(LoginBean loginBean) {
         if (loginBean != null) {
+            SPUtils.putString(this,"movieUser","userId",String.valueOf(loginBean.getResult().getUserId()));
+            SPUtils.putString(this,"movieUser","sessionId",loginBean.getResult().getSessionId());
             startActivity(new Intent(this,HomePageActivity.class));
             finish();
         }

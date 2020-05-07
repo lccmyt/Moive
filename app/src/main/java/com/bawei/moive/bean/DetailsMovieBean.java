@@ -1,5 +1,6 @@
 package com.bawei.moive.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -45,7 +46,7 @@ public class DetailsMovieBean {
         this.status = status;
     }
 
-    public static class ResultBean {
+    public static class ResultBean implements Serializable {
         /**
          * commentNum : 14
          * duration : 105分钟

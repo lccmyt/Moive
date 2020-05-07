@@ -3,12 +3,17 @@ package com.bawei.moive.bean;
 /**
  * @ProjectName: Moive
  * @Package: com.bawei.moive.bean
- * @ClassName: RegisterBean
+ * @ClassName: ReplayCommentBean
  * @Description: (java类作用描述)
  * @Author: 李聪聪
- * @CreateDate: 2020/4/20 20:04
+ * @CreateDate: 2020/5/7 22:53
  */
-public class RegisterBean {
+public class ReplayCommentBean {
+    /**
+     * message : 回复成功
+     * status : 0000
+     */
+
     private String message;
     private String status;
 

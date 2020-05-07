@@ -1,4 +1,4 @@
-package com.bawei.moive.custom;
+package com.bawei.moive.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

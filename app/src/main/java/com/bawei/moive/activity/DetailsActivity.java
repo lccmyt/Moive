@@ -1,24 +1,24 @@
 package com.bawei.moive.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bawei.moive.R;
 import com.bawei.moive.base.BaseActivity;
 import com.bawei.moive.base.BasePresenter;
 import com.bawei.moive.bean.DetailsMovieBean;
 import com.bawei.moive.contract.DetailsContract;
-import com.bawei.moive.custom.DrawerLayout;
-import com.bawei.moive.fragment.CinemaFragment;
+import com.bawei.moive.fragment.FilmReviewFragment;
+import com.bawei.moive.view.DrawerLayout;
 import com.bawei.moive.fragment.ForeshowFragment;
 import com.bawei.moive.fragment.IntroduceFragment;
-import com.bawei.moive.fragment.MovieFragment;
 import com.bawei.moive.fragment.MyFragment;
 import com.bawei.moive.fragment.StillFragment;
 import com.bawei.moive.presenter.DetailsMoviePresenter;
@@ -86,6 +86,7 @@ public class DetailsActivity extends BaseActivity implements DetailsContract.IVi
     DrawerLayout dl;
     private List<String> tabs = new ArrayList<>();
     private List<Fragment> fragmentList = new ArrayList<>();
+    private DetailsMovieBean.ResultBean result;
 
     @Override
     protected int getLayout() {
@@ -116,7 +117,7 @@ public class DetailsActivity extends BaseActivity implements DetailsContract.IVi
         fragmentList.add(new IntroduceFragment());
         fragmentList.add(new ForeshowFragment());
         fragmentList.add(new StillFragment());
-        fragmentList.add(new MyFragment());
+        fragmentList.add(new FilmReviewFragment());
         tab.addTab(tab.newTab().setText(tabs.get(0)));
         tab.addTab(tab.newTab().setText(tabs.get(1)));
         tab.addTab(tab.newTab().setText(tabs.get(2)));
@@ -151,6 +152,7 @@ public class DetailsActivity extends BaseActivity implements DetailsContract.IVi
     @Override
     public void onSuccess(DetailsMovieBean detailsMovieBean) {
         if (detailsMovieBean != null) {
+            result = detailsMovieBean.getResult();
             Glide.with(this).load(detailsMovieBean.getResult().getImageUrl()).into(iv);
             tv1.setText("评分   " + String.valueOf(detailsMovieBean.getResult().getScore()));
             tv2.setText("评论   " + String.valueOf(detailsMovieBean.getResult().getCommentNum()) + "万条");
@@ -183,6 +185,10 @@ public class DetailsActivity extends BaseActivity implements DetailsContract.IVi
                 finish();
                 break;
             case R.id.bt_Comment2:
+                Intent intent = new Intent(this, WhiteEvaluationActivity.class);
+                intent.putExtra("movieName", result.getName());
+                intent.putExtra("movieId", result.getMovieId());
+                startActivity(intent);
                 break;
             case R.id.bt_butticket2:
                 break;
