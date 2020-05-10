@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:background="#1C2243"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:id="@+id/iv"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name"
+            android:text="阿斯顿撒"
+            android:layout_toRightOf="@id/iv"
+            android:textColor="#FDFDFE"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignTop="@id/iv"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_dao"
+            android:text="阿斯顿撒"
+            android:textColor="#FDFDFE"
+            android:layout_below="@id/tv_name"
+            android:layout_alignLeft="@id/tv_name"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/juli"
+            android:layout_alignParentRight="true"
+            android:textColor="#FDFDFE"
+            android:layout_margin="10dp"
+            android:layout_alignBottom="@id/iv"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

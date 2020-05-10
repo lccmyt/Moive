@@ -7,6 +7,8 @@ import com.bawei.moive.bean.EmailCodeBean;
 import com.bawei.moive.bean.FilmReviewBean;
 import com.bawei.moive.bean.LoadingMovieBean;
 import com.bawei.moive.bean.LoginBean;
+import com.bawei.moive.bean.NearByBean;
+import com.bawei.moive.bean.RecommedCinemasBean;
 import com.bawei.moive.bean.RegisterBean;
 import com.bawei.moive.bean.ReplayCommentBean;
 import com.bawei.moive.bean.UpcomingBean;
@@ -76,5 +78,13 @@ public interface Apis {
     @POST("movie/v1/verify/commentReply")
     @FormUrlEncoded
     Observable<ReplayCommentBean> replayComment(@Field("commentId")int commentId,@Field("replyContent")String replyContent);
+
+    //查询推荐影院信息
+    @GET("cinema/v1/findRecommendCinemas")
+    Observable<RecommedCinemasBean> show(@Query("page") int page, @Query("count") int count);
+
+    //查询附近影院
+    @GET("cinema/v1/findNearbyCinemas")
+    Observable<NearByBean> showNearCinemas(@Query("longitude") String longitude, @Query("latitude") String latitude, @Query("page") int page, @Query("count") int count);
 
 }
